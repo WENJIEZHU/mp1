@@ -1,0 +1,568 @@
+== CS 241 Autograder Note: ==
+This autograder is a preliminary assessment of your program's correctness. Your
+grade may change UP OR DOWN based on the CORRECTNESS OF YOUR PROGRAM. We make every effort to ensure
+that our autograder is 'smart' enough to not count off for simple things like grammar but, in doing so,
+we may inadvertently allow for incorrect code to be counted as correct. If we have to change our script
+to better reflect the CORRECTNESS OF YOUR PROGRAM, we will run the script on EVERY PROGRAM and update
+EVERY AUTOGRADER OUTPUT to ensure fairness to all students. Thanks for understanding! - CS 241 Staff
+
+(Please note, this autograder does not reflect a late submission penalty. This will be applied on Compass.)
+
+
+=== MP1 CS 241 Autograder Summary ===
+Program Execution Score (90% weight): 27.0/27.0 (100.0%)
+Program Heap Freed (5% weight): PASSED (100%)
+Correct Memory Usage (5% weight): PASSED (100%)
+
+
+=== MP1 CS 241 Scoring Breakdown ===
+--- Details for "MP1" ---
+Total "MP1" Sub-Score: 27.0
+	... Details for "MP1", "Does the shell start and exit?"...
+	Total "MP1", "Does the shell start and exit?" Sub-Score: 1.0
+		Shell was able to exit successfully.
+	... Details for "MP1", "Does the shell have the correct prompt?"...
+	Total "MP1", "Does the shell have the correct prompt?" Sub-Score: 1.0
+		Shell contains the correct prompt.
+	... Details for "MP1", "Test 'cd folder'"...
+	Total "MP1", "Test 'cd folder'" Sub-Score: 1.0
+		test successful.
+	... Details for "MP1", "Test 'cd xxx' into an invalid directory"...
+	Total "MP1", "Test 'cd xxx' into an invalid directory" Sub-Score: 1.0
+		'cd xxx' into invalid directory successful.
+	... Details for "MP1", "Test -h"...
+	Total "MP1", "Test -h" Sub-Score: 1.0
+		'Test -h test successful
+	... Details for "MP1", "Test '-f "...
+	Total "MP1", "Test '-f " Sub-Score: 1.0
+		'shell -f successful
+	... Details for "MP1", "Test = "...
+	Total "MP1", "Test = " Sub-Score: 1.0
+		'shell = successful
+	... Details for "MP1", "Test & "...
+	Total "MP1", "Test & " Sub-Score: 1.0
+		Shell put child process in background correctly!
+	... Details for "MP1", "Test Ctrl C "...
+	Total "MP1", "Test Ctrl C " Sub-Score: 1.0
+		Extra points. ctrl C question removed
+	... Details for "MP1", "Attempt to list empty history"...
+	Total "MP1", "Attempt to list empty history" Sub-Score: 2.0
+		Shell displayed empty history correctly!
+	... Details for "MP1", "Attempt to list history"...
+	Total "MP1", "Attempt to list history" Sub-Score: 2.0
+		Shell displayed history entry correctly!
+	... Details for "MP1", "Attempt to list multiple history entries"...
+	Total "MP1", "Attempt to list multiple history entries" Sub-Score: 2.0
+		Shell displayed two history entries successfully!
+	... Details for "MP1", "Zero argument non built-in command."...
+	Total "MP1", "Zero argument non built-in command." Sub-Score: 2.0
+		Shell ran non built-in command successfully!
+	... Details for "MP1", "One argument non built-in command."...
+	Total "MP1", "One argument non built-in command." Sub-Score: 2.0
+		Shell ran non built-in command successfully!
+	... Details for "MP1", "Re-run one no-argument command via history"...
+	Total "MP1", "Re-run one no-argument command via history" Sub-Score: 2.0
+		Shell ran one non built-in command via history successfully!
+	... Details for "MP1", "Detect usage of system() or fork()+exec()"...
+	Total "MP1", "Detect usage of system() or fork()+exec()" Sub-Score: 6.0
+		A call to fork and exec has been found. The shell is using fork()+exec()
+
+
+
+
+=== MP1 CS 241 Raw Autograder Log ===
+[config]: Initializing the AssignmentGrader class "mp1"...
+[config]: Initializing the SegmentGrader class "mp1_1". Loading...
+[config]: Assignment initalization complete!
+[info]: The submission in "/srv/local/cs241grader/release/fa14-qi/fa14-cs241/wzhu26" for assignment "mp1" is ready to be graded. Running grading tasks...
+[info]: Beginning to grade assignment "MP1 CS 241"...
+[fine]: Launching assignment-specific code for "MP1 CS 241", "MP1 CS 241"...
+[finer]: Running command [make] with a timeout of 60000ms.
+[finer]: Completed execution of "make" with exit code = 0.
+[finest]: [stdout:1]: gcc -o log.o log.c -c -g -Wall -W
+[finest]: [stdout:2]: gcc -o shell shell.c log.o -g -Wall -W
+[fine]: Launching segment-specific code for "MP1 CS 241", "MP1 CS 241", "MP1"...
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Does the shell start and exit?"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=12424)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12424
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Does the shell have the correct prompt?"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=12442)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12442
+[finer]: Testing for occurance 1 of "\d+.*/class/cs241/private/mp/ag-full" in process output.
+[finer]: Not enough occurances of the pattern was found; returning (null).
+[finer]: Testing for occurance 1 of "\d+.*/class/cs241/private/mp/ag-full-fa13" in process output.
+[finer]: Not enough occurances of the pattern was found; returning (null).
+[finer]: Testing for occurance 1 of ".*pid=.*" in process output.
+[finer]: Found pattern at line 1 of standard output. Returning gorup 0: "(pid=12442)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12442".
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Test 'cd folder'"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 1000ms.
+[finer]: Writing input line "cd mp1-autograde
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=12463)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12463
+[finest]: [stdout:2]: (pid=12463)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14/mp1-autograde$ Command executed by pid=12463
+[finer]: Testing for occurance 1 of "mp1-autograde" in process output.
+[finer]: Found pattern at line 2 of standard output. Returning gorup 0: "mp1-autograde".
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Test 'cd xxx' into an invalid directory"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "cd blahblahblah
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=12471)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12471
+[finest]: [stdout:2]: blahblahblah: No such file or directory
+[finest]: [stdout:3]: (pid=12471)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12471
+[finer]: Testing for string "blahblahblah" in process output.
+[finer]: String found in line 2 of standard output.
+[finer]: Testing for string "No such file or directory" in process output.
+[finer]: String found in line 2 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Test -h"...
+[finer]: Running command [./mp1-autograde/shell -h] with a timeout of 500ms.
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: Shell by wzhu26
+[finest]: [stdout:2]: (pid=12490)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12490
+[finer]: Testing for string "Shell by" in process output.
+[finer]: String found in line 1 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Test '-f "...
+[finer]: Running command [./mp1-autograde/shell -f /srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14/mp1/mp1testfile] with a timeout of 500ms.
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: echo1 ran successfully
+[finest]: [stdout:2]: echo2 ran successfully
+[finest]: [stdout:3]: (pid=12511)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12511
+[finer]: Testing for string "echo1" in process output.
+[finer]: String found in line 1 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Test = "...
+[finer]: Running command [./mp1-autograde/shell =] with a timeout of 500ms.
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: TERM=xterm-256color
+[finest]: [stdout:2]: ANDROID_SDK=/software/android-sdk-latest-el6-i686
+[finest]: [stdout:3]: JAVA_HOME=/software/sun-jdk-1.6.0-latest-el6-x86_64
+[finest]: [stdout:4]: LOCALDIR=/srv/local/cs241grader/release/fa14-qi/fa14-cs241
+[finest]: [stdout:5]: KDEDIRS=/usr
+[finest]: [stdout:6]: P3_HOME=/software/patran-2010.2.3-x86_64
+[finest]: [stdout:7]: MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+[finest]: [stdout:8]: SSH_CLIENT=172.17.210.63 49677 22
+[finest]: [stdout:9]: MODULEPATH_modshare=/usr/share/Modules/modulefiles:1:/etc/modulefiles:2
+[finest]: [stdout:10]: MAIL=/var/spool/mail/qiwang12
+[finest]: [stdout:11]: PWD=/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:12]: SELINUX_ROLE_REQUESTED=
+[finest]: [stdout:13]: HOSTNAME=cs241-server.ews.illinois.edu
+[finest]: [stdout:14]: MGLS_LICENSE_FILE=1717@mentor.webstore.illinois.edu
+[finest]: [stdout:15]: ISEDB=/home/qiwang12/ise/Linux
+[finest]: [stdout:16]: CVS_RSH=/usr/bin/ssh
+[finest]: [stdout:17]: SOFTPATH=/software
+[finest]: [stdout:18]: ENX_OU=ews
+[finest]: [stdout:19]: G_BROKEN_FILENAMES=1
+[finest]: [stdout:20]: LOADEDMODULES_modshare=:999999999:sun-jdk/1.6.0-latest-el6-x86_64:1:mentor/sp12:1:class/classes:1:mathematica/8.0:1:android-sdk/latest:1:lc3tools/12:1:env/ews:1:tcad-sentaurus/I-2013.12:1:matlab/R2011a:1:patran/2010.2.3:1:spim/2011.08.11:1:tecplot360/2014:1:env/enx:1:ocaml/4.01.0:1:eclipse/3.7:1:ansys/12.1.1:1
+[finest]: [stdout:21]: NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+[finest]: [stdout:22]: LM_PROJECT=MATLABTEACHING
+[finest]: [stdout:23]: SELINUX_USE_CURRENT_RANGE=
+[finest]: [stdout:24]: TMPDIR=/tmp
+[finest]: [stdout:25]: HISTSIZE=1000
+[finest]: [stdout:26]: COBBLER_SERVER=130.126.112.126
+[finest]: [stdout:27]: PATH=/software/ews/bin:/software/ocaml-4.01.0-el6-x86_64/bin:/software/tcad-sentaurus-I-2013.12/bin:/software/ansys-12.1.1/v121/ansys/bin:/software/patran-2010.2.3-x86_64/bin:/software/spim-2011.08.11-el6-x86_64/usr/bin:/software/Mathematica-8.0/bin:/software/lc3tools-12/bin:/software/matlab-R2011a-x86_64/bin:/software/mentor/ModelSim-SE-10.1d/modeltech/bin:/software/mentor/PS2012b/Mgc_home/bin:/software/mentor/HDS_2012.1/bin:/software/android-sdk-latest-el6-i686/platform-tools:/software/android-sdk-latest-el6-i686/tools:/software/eclipse-3.7-el6-x86_64:/software/sun-jdk-1.6.0-latest-el6-x86_64/bin:/srv/adm/bin:/usr/lib64/qt-3.3/bin:/usr/NX/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/software/tecplot360ex-2014/bin
+[finest]: [stdout:28]: MP=mp1
+[finest]: [stdout:29]: LIBC_FATAL_STDERR_=1
+[finest]: [stdout:30]: LM_LICENSE_FILE=27005@synopsys.webstore.illinois.edu
+[finest]: [stdout:31]: QTLIB=/usr/lib64/qt-3.3/lib
+[finest]: [stdout:32]: KDE_IS_PRELINKED=1
+[finest]: [stdout:33]: BASE=/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class
+[finest]: [stdout:34]: ARCH=x86_64
+[finest]: [stdout:35]: _LMFILES_=/etc/modulefiles/sun-jdk/1.6.0-latest-el6-x86_64:/etc/modulefiles/eclipse/3.7:/etc/modulefiles/android-sdk/latest:/etc/modulefiles/mentor/sp12:/etc/modulefiles/matlab/R2011a:/etc/modulefiles/lc3tools/12:/etc/modulefiles/mathematica/8.0:/etc/modulefiles/spim/2011.08.11:/etc/modulefiles/patran/2010.2.3:/etc/modulefiles/ansys/12.1.1:/etc/modulefiles/tecplot360/2014:/etc/modulefiles/tcad-sentaurus/I-2013.12:/etc/modulefiles/class/classes:/etc/modulefiles/ocaml/4.01.0:/etc/modulefiles/env/ews:/etc/modulefiles/env/enx
+[finest]: [stdout:36]: ISEROOT=/software/tcad-sentaurus-I-2013.12
+[finest]: [stdout:37]: SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+[finest]: [stdout:38]: MODULESHOME=/srv/adm/modules
+[finest]: [stdout:39]: STDB=/home/qiwang12/ise/Linux
+[finest]: [stdout:40]: SHLVL=2
+[finest]: [stdout:41]: _LMFILES__modshare=/etc/modulefiles/ansys/12.1.1:1:/etc/modulefiles/sun-jdk/1.6.0-latest-el6-x86_64:1:/etc/modulefiles/mentor/sp12:1:/etc/modulefiles/class/classes:1:/etc/modulefiles/mathematica/8.0:1:/etc/modulefiles/android-sdk/latest:1:/etc/modulefiles/lc3tools/12:1:/etc/modulefiles/env/ews:1:/etc/modulefiles/matlab/R2011a:1:/etc/modulefiles/tcad-sentaurus/I-2013.12:1:/etc/modulefiles/patran/2010.2.3:1:/etc/modulefiles/spim/2011.08.11:1:/etc/modulefiles/tecplot360/2014:1:/etc/modulefiles/env/enx:1:/etc/modulefiles/ocaml/4.01.0:1:/etc/modulefiles/eclipse/3.7:1
+[finest]: [stdout:42]: LM_LICENSE_FILE_modshare=27005@synopsys.webstore.illinois.edu:1
+[finest]: [stdout:43]: XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+[finest]: [stdout:44]: MANPATH=/software/ocaml-4.01.0-el6-x86_64/man:/software/spim-2011.08.11-el6-x86_64/usr/man:/usr/local/share/man:/usr/X11R6/man:/usr/man:/usr/share/man:/usr/local/man
+[finest]: [stdout:45]: DIST=el6
+[finest]: [stdout:46]: SSH_TTY=/dev/pts/3
+[finest]: [stdout:47]: LOGNAME=qiwang12
+[finest]: [stdout:48]: DISTARCH=el6-x86_64
+[finest]: [stdout:49]: _=/usr/bin/timeout
+[finest]: [stdout:50]: QTDIR=/usr/lib64/qt-3.3
+[finest]: [stdout:51]: NXDIR=/usr/NX
+[finest]: [stdout:52]: LD_LIBRARY_PATH=/software/sun-jdk-1.6.0-latest-el6-x86_64/jre/lib/amd64/server:/software/sun-jdk-1.6.0-latest-el6-x86_64/jre/lib/amd64:/software/sun-jdk-1.6.0-latest-el6-x86_64/jre/../lib/amd64
+[finest]: [stdout:53]: SSH_CONNECTION=172.17.210.63 49677 128.174.246.225 22
+[finest]: [stdout:54]: PATH_modshare=/software/ews/bin:1:/usr/bin:1:/software/android-sdk-latest-el6-i686/tools:1:/software/android-sdk-latest-el6-i686/platform-tools:1:/usr/local/bin:1:/srv/adm/bin:1:/software/tcad-sentaurus-I-2013.12/bin:1:/software/mentor/HDS_2012.1/bin:1:/software/sun-jdk-1.6.0-latest-el6-x86_64/bin:1:/bin:1:/software/mentor/ModelSim-SE-10.1d/modeltech/bin:1:/software/matlab-R2011a-x86_64/bin:1:/software/spim-2011.08.11-el6-x86_64/usr/bin:1:/software/Mathematica-8.0/bin:1:/software/ocaml-4.01.0-el6-x86_64/bin:1:/software/ansys-12.1.1/v121/ansys/bin:1:/sbin:1:/software/eclipse-3.7-el6-x86_64:1:/software/patran-2010.2.3-x86_64/bin:1:/software/lc3tools-12/bin:1:/usr/sbin:1:/software/mentor/PS2012b/Mgc_home/bin:1:/software/tecplot360ex-2014/bin:1:/usr/NX/bin:1:/usr/lib64/qt-3.3/bin:1:/usr/local/sbin:1
+[finest]: [stdout:55]: OLDPWD=/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:56]: SELINUX_LEVEL_REQUESTED=
+[finest]: [stdout:57]: SHELL=/bin/bash
+[finest]: [stdout:58]: module=() {  eval `$TCLSH /srv/adm/modules/modulecmd.tcl bash $*`
+[finest]: [stdout:59]: }
+[finest]: [stdout:60]: LC_CTYPE=UTF-8
+[finest]: [stdout:61]: MGLS_LICENSE_FILE_modshare=1717@mentor.webstore.illinois.edu:1
+[finest]: [stdout:62]: QTINC=/usr/lib64/qt-3.3/include
+[finest]: [stdout:63]: USER=qiwang12
+[finest]: [stdout:64]: HOME=/home/qiwang12
+[finest]: [stdout:65]: HISTCONTROL=ignoredups
+[finest]: [stdout:66]: LESSOPEN=||/usr/bin/lesspipe.sh %s
+[finest]: [stdout:67]: LOADEDMODULES=:sun-jdk/1.6.0-latest-el6-x86_64:eclipse/3.7:android-sdk/latest:mentor/sp12:matlab/R2011a:lc3tools/12:mathematica/8.0:spim/2011.08.11:patran/2010.2.3:ansys/12.1.1:tecplot360/2014:tcad-sentaurus/I-2013.12:class/classes:ocaml/4.01.0:env/ews:env/enx
+[finest]: [stdout:68]: DATE=0925
+[finest]: [stdout:69]: MANPATH_modshare=/usr/man:1:/usr/local/share/man:1:/usr/X11R6/man:1:/software/spim-2011.08.11-el6-x86_64/usr/man:1:/usr/local/man:1:/usr/share/man:1:/software/ocaml-4.01.0-el6-x86_64/man:1
+[finest]: [stdout:70]: LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5 ...
+[finest]: [stdout:71]: KRB5CCNAME=FILE:/tmp/krb5cc_532423_XEDy2E
+[finest]: [stdout:72]: LANG=en_US.UTF-8
+[finest]: [stdout:73]: (pid=12535)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12535
+[finer]: Testing for string "SHELL=/bin/bash" in process output.
+[finer]: String found in line 57 of standard output.
+[finer]: Testing for string "PATH=" in process output.
+[finer]: String found in line 7 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Test & "...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 5000ms.
+[finer]: Writing input line "sleep 10 &
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=12548)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12548
+[finest]: [stdout:2]: Execution took 1218 microseconds.
+[finest]: [stdout:3]: (pid=12548)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12548
+[finest]: [stderr:1]: sleep: invalid time interval `&'
+[finest]: [stderr:2]: Try `sleep --help' for more information.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Test Ctrl C "...
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Attempt to list empty history"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "!#
+" to process and then waiting 100ms...
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=12565)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12565
+[finest]: [stdout:2]: (pid=12565)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12565
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Attempt to list history"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 100ms...
+[finer]: Writing input line "!#
+" to process and then waiting 100ms...
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: /srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:2]: (pid=12594)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12594
+[finest]: [stdout:3]: Execution took 656 microseconds.
+[finest]: [stdout:4]: (pid=12594)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12594
+[finest]: [stdout:5]: pwd
+[finest]: [stdout:6]: (pid=12594)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12594
+[finer]: Testing for string "pwd" in process output.
+[finer]: String found in line 5 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Attempt to list multiple history entries"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 100ms...
+[finer]: Writing input line "hostname
+" to process and then waiting 100ms...
+[finer]: Writing input line "!#
+" to process and then waiting 100ms...
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: /srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:2]: cs241-server.ews.illinois.edu
+[finest]: [stdout:3]: (pid=12662)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12662
+[finest]: [stdout:4]: Execution took 778 microseconds.
+[finest]: [stdout:5]: (pid=12662)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12662
+[finest]: [stdout:6]: Execution took 1379 microseconds.
+[finest]: [stdout:7]: (pid=12662)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12662
+[finest]: [stdout:8]: pwd
+[finest]: [stdout:9]: hostname
+[finest]: [stdout:10]: (pid=12662)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12662
+[finer]: Testing for string "pwd" in process output.
+[finer]: String found in line 8 of standard output.
+[finer]: Testing for string "hostname" in process output.
+[finer]: String found in line 9 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Zero argument non built-in command."...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "hostname
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: cs241-server.ews.illinois.edu
+[finest]: [stdout:2]: (pid=12802)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12802
+[finest]: [stdout:3]: Execution took 899 microseconds.
+[finest]: [stdout:4]: (pid=12802)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12802
+[finer]: Testing for string "illinois" in process output.
+[finer]: String found in line 1 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "One argument non built-in command."...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "echo Chicken
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: Chicken
+[finest]: [stdout:2]: (pid=12837)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12837
+[finest]: [stdout:3]: Execution took 638 microseconds.
+[finest]: [stdout:4]: (pid=12837)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12837
+[finer]: Testing for string "Chicken" in process output.
+[finer]: String found in line 1 of standard output.
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Re-run one no-argument command via history"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "hostname
+" to process and then waiting 10ms...
+[finer]: Writing input line "!h
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: cs241-server.ews.illinois.edu
+[finest]: [stdout:2]: cs241-server.ews.illinois.edu
+[finest]: [stdout:3]: (pid=12881)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12881
+[finest]: [stdout:4]: Execution took 665 microseconds.
+[finest]: [stdout:5]: (pid=12881)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12881
+[finest]: [stdout:6]: h matches hostname
+[finest]: [stdout:7]: Execution took 948 microseconds.
+[finest]: [stdout:8]: (pid=12881)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=12881
+[finer]: Testing for occurance 2 of "illinois" in process output.
+[finer]: Found pattern at line 1 of standard output. Need 1 more occurance(s).
+[finer]: Found pattern at line 2 of standard output. Returning gorup 0: "illinois".
+[fine]: Launching element-specific code for "MP1 CS 241", "MP1 CS 241", "MP1", "Detect usage of system() or fork()+exec()"...
+[finer]: Running command [./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "ls
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp1-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: #mp6_1.java#
+[finest]: [stdout:2]: alice.txt
+[finest]: [stdout:3]: bomb.txt
+[finest]: [stdout:4]: bomb.txt.0923
+[finest]: [stdout:5]: bomb.txt.bak
+[finest]: [stdout:6]: bomb_bak2.txt
+[finest]: [stdout:7]: bomb_bomb.txt
+[finest]: [stdout:8]: cs241AssignmentGraderBase.class
+[finest]: [stdout:9]: cs241AssignmentGraderBase.java
+[finest]: [stdout:10]: cs241SegmentGraderBase.class
+[finest]: [stdout:11]: cs241SegmentGraderBase.java
+[finest]: [stdout:12]: edu
+[finest]: [stdout:13]: fan-bomb.txt
+[finest]: [stdout:14]: grader_files
+[finest]: [stdout:15]: hs_err_pid16609.log
+[finest]: [stdout:16]: hs_err_pid19525.log
+[finest]: [stdout:17]: hs_err_pid20961.log
+[finest]: [stdout:18]: hs_err_pid23690.log
+[finest]: [stdout:19]: hs_err_pid28983.log
+[finest]: [stdout:20]: hs_err_pid30407.log
+[finest]: [stdout:21]: hs_err_pid3189.log
+[finest]: [stdout:22]: hs_err_pid4473.log
+[finest]: [stdout:23]: hs_err_pid4548.log
+[finest]: [stdout:24]: hs_err_pid4619.log
+[finest]: [stdout:25]: hs_err_pid4688.log
+[finest]: [stdout:26]: hs_err_pid4819.log
+[finest]: [stdout:27]: huq2
+[finest]: [stdout:28]: hyu34
+[finest]: [stdout:29]: jzwang2
+[finest]: [stdout:30]: killvg.sh
+[finest]: [stdout:31]: libdrm-grade
+[finest]: [stdout:32]: libdrm-src
+[finest]: [stdout:33]: libdrm.class
+[finest]: [stdout:34]: libdrm.java
+[finest]: [stdout:35]: libdrm_1.class
+[finest]: [stdout:36]: libdrm_1.java
+[finest]: [stdout:37]: log_diff
+[finest]: [stdout:38]: loggfile.txt
+[finest]: [stdout:39]: logs
+[finest]: [stdout:40]: logs_c89
+[finest]: [stdout:41]: logs_c99
+[finest]: [stdout:42]: manual
+[finest]: [stdout:43]: mp0
+[finest]: [stdout:44]: mp0-autograde
+[finest]: [stdout:45]: mp0.class
+[finest]: [stdout:46]: mp0.java
+[finest]: [stdout:47]: mp0_1.class
+[finest]: [stdout:48]: mp0_1.java
+[finest]: [stdout:49]: mp1
+[finest]: [stdout:50]: mp1-autograde
+[finest]: [stdout:51]: mp1.class
+[finest]: [stdout:52]: mp1.java
+[finest]: [stdout:53]: mp1_1.class
+[finest]: [stdout:54]: mp1_1.java
+[finest]: [stdout:55]: mp1_1.java.bak
+[finest]: [stdout:56]: mp3_1.java.bak
+[finest]: [stdout:57]: mp3_1.java~
+[finest]: [stdout:58]: mp4
+[finest]: [stdout:59]: mp4-autograde
+[finest]: [stdout:60]: mp4.class
+[finest]: [stdout:61]: mp4.java
+[finest]: [stdout:62]: mp4.java~
+[finest]: [stdout:63]: mp4_1.class
+[finest]: [stdout:64]: mp4_1.java
+[finest]: [stdout:65]: mp4_1.java~
+[finest]: [stdout:66]: mp5
+[finest]: [stdout:67]: mp5-autograde
+[finest]: [stdout:68]: mp5-sp12
+[finest]: [stdout:69]: mp5.class
+[finest]: [stdout:70]: mp5.java
+[finest]: [stdout:71]: mp5_1.class
+[finest]: [stdout:72]: mp5_1.java
+[finest]: [stdout:73]: mp6
+[finest]: [stdout:74]: mp6-autograde
+[finest]: [stdout:75]: mp6-autograder
+[finest]: [stdout:76]: mp6.class
+[finest]: [stdout:77]: mp6.java
+[finest]: [stdout:78]: mp6_1.class
+[finest]: [stdout:79]: mp6_1.java
+[finest]: [stdout:80]: mp7
+[finest]: [stdout:81]: mp7-autograde
+[finest]: [stdout:82]: mp7.class
+[finest]: [stdout:83]: mp7.java
+[finest]: [stdout:84]: mp7_1$MakeServerRequestInThread.class
+[finest]: [stdout:85]: mp7_1$RunStudentProgramInThread.class
+[finest]: [stdout:86]: mp7_1.class
+[finest]: [stdout:87]: mp7_1.java
+[finest]: [stdout:88]: mp8.class
+[finest]: [stdout:89]: mp8.java~
+[finest]: [stdout:90]: mp8_1$MakeServerRequestInThread.class
+[finest]: [stdout:91]: mp8_1$RunStudentProgramInThread.class
+[finest]: [stdout:92]: mp8_1.class
+[finest]: [stdout:93]: mp8_1.java~
+[finest]: [stdout:94]: mpexam.class
+[finest]: [stdout:95]: mpexam.java
+[finest]: [stdout:96]: mpexam_1.class
+[finest]: [stdout:97]: mpexam_1.java
+[finest]: [stdout:98]: mpexam_exec
+[finest]: [stdout:99]: mpx_client
+[finest]: [stdout:100]: mpx_client-autograde
+[finest]: [stdout:101]: mpx_client.class
+[finest]: [stdout:102]: mpx_client.java
+[finest]: [stdout:103]: mpx_client.java~
+[finest]: [stdout:104]: mpx_client_1$RunStudentProgramInThread.class
+[finest]: [stdout:105]: mpx_client_1.class
+[finest]: [stdout:106]: mpx_client_1.java
+[finest]: [stdout:107]: mpx_client_1.java~
+[finest]: [stdout:108]: mpx_server
+[finest]: [stdout:109]: mpx_server-autograde
+[finest]: [stdout:110]: mpx_server.class
+[finest]: [stdout:111]: mpx_server.java
+[finest]: [stdout:112]: mpx_server.java~
+[finest]: [stdout:113]: mpx_server_1$RunStudentProgramInThread.class
+[finest]: [stdout:114]: mpx_server_1.class
+[finest]: [stdout:115]: mpx_server_1.java
+[finest]: [stdout:116]: mpx_server_1.java~
+[finest]: [stdout:117]: nightly-mp4.sh
+[finest]: [stdout:118]: oldmp1
+[finest]: [stdout:119]: oldmp3
+[finest]: [stdout:120]: org
+[finest]: [stdout:121]: puchner2
+[finest]: [stdout:122]: server2
+[finest]: [stdout:123]: temp.txt
+[finest]: [stdout:124]: ttjiang2
+[finest]: [stdout:125]: web
+[finest]: [stdout:126]: wget.html
+[finest]: [stdout:127]: xyuan12
+[finest]: [stdout:128]: yiboguo2
+[finest]: [stdout:129]: zluo4
+[finest]: [stdout:130]: ???
+[finest]: [stdout:131]: (pid=13056)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=13056
+[finest]: [stdout:132]: Execution took 1831 microseconds.
+[finest]: [stdout:133]: (pid=13056)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=13056
+[finer]: Testing for occurance 1 of "(pid=\d+)" in process output.
+[finer]: Found pattern at line 131 of standard output. Returning gorup 0: "pid=13056".
+[finer]: Testing for occurance 1 of "by pid\s*=\s*\d+" in process output.
+[finer]: Found pattern at line 131 of standard output. Returning gorup 0: "by pid=13056".
+[finer]: Testing for occurance 2 of "by pid\s*=\s*\d+" in process output.
+[finer]: Found pattern at line 131 of standard output. Need 1 more occurance(s).
+[finer]: Found pattern at line 133 of standard output. Returning gorup 0: "by pid=13056".
+[finer]: Testing for occurance 3 of "by pid\s*=\s*\d+" in process output.
+[finer]: Found pattern at line 131 of standard output. Need 2 more occurance(s).
+[finer]: Found pattern at line 133 of standard output. Need 1 more occurance(s).
+[finer]: Not enough occurances of the pattern was found; returning (null).
+[finer]: Running command [grep exec mp1-autograde/shell.c] with a timeout of 500ms.
+[finer]: Completed execution of "grep" with exit code = 0.
+[finest]: [stdout:1]: 		printf(" Command executed by pid=%d\n", pid);
+[finest]: [stdout:2]:     				execvp(list[0], list);
+[finest]: [stdout:3]: 				if (execvp(list[0], list) < 0)
+[finer]: Running command [grep fork mp1-autograde/shell.c] with a timeout of 500ms.
+[finer]: Completed execution of "grep" with exit code = 0.
+[finest]: [stdout:1]:   			child_pid = fork();
+[finer]: Running command [grep system mp1-autograde/shell.c] with a timeout of 500ms.
+[finer]: Completed execution of "grep" with exit code = 0.
+[finest]: [stdout:1]: 		system(buff);
+[fine]: Launching memory grader code for "MP1"...
+[finer]: Running command [valgrind ./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 10ms...
+[finer]: Writing input line "!p
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: /srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:2]: /srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:3]: (pid=13746)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=13746
+[finest]: [stdout:4]: Execution took 13213 microseconds.
+[finest]: [stdout:5]: (pid=13746)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=13746
+[finest]: [stdout:6]: p matches pwd
+[finest]: [stdout:7]: Execution took 13263 microseconds.
+[finest]: [stdout:8]: (pid=13746)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=13746
+[finest]: [stderr:1]: ==13746== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==13746== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==13746== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==13746== Command: ./mp1-autograde/shell
+[finest]: [stderr:5]: ==13746== 
+[finest]: [stderr:6]: ==13746== 
+[finest]: [stderr:7]: ==13746== HEAP SUMMARY:
+[finest]: [stderr:8]: ==13746==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==13746==   total heap usage: 8 allocs, 8 frees, 420 bytes allocated
+[finest]: [stderr:10]: ==13746== 
+[finest]: [stderr:11]: ==13746== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==13746== 
+[finest]: [stderr:13]: ==13746== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==13746== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[fine]: Launching memory grader code for "MP1"...
+[finer]: Running command [valgrind ./mp1-autograde/shell] with a timeout of 500ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 10ms...
+[finer]: Writing input line "!p
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: /srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:2]: /srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14
+[finest]: [stdout:3]: (pid=14721)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=14721
+[finest]: [stdout:4]: Execution took 13789 microseconds.
+[finest]: [stdout:5]: (pid=14721)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=14721
+[finest]: [stdout:6]: p matches pwd
+[finest]: [stdout:7]: Execution took 12191 microseconds.
+[finest]: [stdout:8]: (pid=14721)/srv/local/cs241grader/release/fa14-svn/fa14-cs241/_class/ag-fa14$ Command executed by pid=14721
+[finest]: [stderr:1]: ==14721== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==14721== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==14721== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==14721== Command: ./mp1-autograde/shell
+[finest]: [stderr:5]: ==14721== 
+[finest]: [stderr:6]: ==14721== 
+[finest]: [stderr:7]: ==14721== HEAP SUMMARY:
+[finest]: [stderr:8]: ==14721==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==14721==   total heap usage: 8 allocs, 8 frees, 420 bytes allocated
+[finest]: [stderr:10]: ==14721== 
+[finest]: [stderr:11]: ==14721== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==14721== 
+[finest]: [stderr:13]: ==14721== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==14721== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[fine]: The assignment-specific grade() method completed successfully.
+[info]: The submission in "/srv/local/cs241grader/release/fa14-qi/fa14-cs241/wzhu26" for assignment "mp1" has finished grading. Running final tasks...
